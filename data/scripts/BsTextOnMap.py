@@ -20,7 +20,7 @@ def __init__(self, vrOverlayCenterOffset=None):
         self.preloadData = self.preload(onDemand=True)
         def text():
                 #bySoby
-                message = random.choice([u'\ue048Welcome to the server by PCModder\ue048',u'\ue00cServer version is 1.4.155\ue00c',u'\ue00cA day without laughter is a day wasted\ue00c',u'\ue048Join us in our discord server\ue048',u'\ue048Go out with memories, not dreams\ue048'])
+                message = random.choice([u'\ue048Welcome to the server\ue048\nBy \ue043\ue048JYstreemYT\ue048\ue043',u'\ue00cServer version is 1.4.155\ue00c',u'\ue00cA day without laughter is a day wasted\ue00c',u'\ue048Join us in our discord server\ue048',u'\ue048Go out with memories, not dreams\ue048',u'Thanks to PCModder, Editted by JYstreemYT'])
                 t = bs.newNode('text',
                        attrs={ 'text':message,
                               'scale':1,
@@ -35,7 +35,7 @@ def __init__(self, vrOverlayCenterOffset=None):
                 bs.gameTimer(51000,t.delete)
                 list = MID.members_count
                 size = len(list)
-                count = ('\n\n'+u'\ue00cMembers Count: '+str(size)+u'\ue00c')
+                count = ('\n_____________________\n'+u'\ue00cMembers Count: '+str(size)+u'\ue00c\n_____________________\n')
                 t = bs.newNode('text',
                        attrs={ 'text': count,
                               'scale':0.75,
@@ -48,21 +48,9 @@ def __init__(self, vrOverlayCenterOffset=None):
                               'vAttach':'top'})
                 bs.animate(t,'opacity',{0: 0.0,500: 1.0,6500: 1.0,51000: 0.0})
                 bs.gameTimer(51000,t.delete)
+
                 t = bs.newNode('text',
-                       attrs={ 'text':u'You can only dance around destiny for so long\n until fate pulls you in',
-                              'scale':1.3,
-                              'maxWidth':0,
-                              'position':(0,138),
-                              'shadow':0.5,
-                              'flatness':1.2,
-                              'color':(1,1,1),
-                              'hAlign':'center',
-                              'vAttach':'bottom'})
-                bs.animate(t,'opacity',{0: 0.0,500: 1.0,6500: 1.0,7000: 0.0})
-                bs.gameTimer(7000,t.delete)
-                ##
-                t = bs.newNode('text',
-                       attrs={ 'text':u'Welcome to the server by Vortex and PCModder!',
+                       attrs={ 'text':u'Welcome to the server by JY!',
                               'scale':1.3,
                               'maxWidth':0,
                               'position':(0,138),
@@ -73,19 +61,6 @@ def __init__(self, vrOverlayCenterOffset=None):
                               'vAttach':'bottom'})
                 bs.animate(t,'opacity',{8500: 0.0,9000: 1.0,14500: 1.0,15000: 0.0})
                 bs.gameTimer(15000,t.delete)
-                #bySoby
-                t = bs.newNode('text',
-                       attrs={ 'text':u'Happiness is not by chance but by choice',
-                              'scale':1.3,
-                              'maxWidth':0,
-                              'position':(0,138),
-                              'color':(1,1,1),
-                              'shadow':0.5,
-                              'flatness':1.0,
-                              'hAlign':'center',
-                              'vAttach':'bottom'})
-                bs.animate(t,'opacity',{17500: 0.0,18500: 1.0,24500: 1.0,25000: 0.0})
-                bs.gameTimer(25000,t.delete)
                 #bySoby..............................Dont Edit This
                 t = bs.newNode('text',
                        attrs={ 'text':u'For those who wish to take down server \n by all means, do your worst',
@@ -98,6 +73,7 @@ def __init__(self, vrOverlayCenterOffset=None):
                               'hAlign':'center',
                               'vAttach':'bottom'})
                 bs.animate(t,'opacity',{27000: 0.0,27500: 1.0,33500: 1.0,34000: 0.0})
+                ##
                 bs.gameTimer(34000,t.delete)
                 t = bs.newNode('text',
                        attrs={ 'text':u'#LoveYou4||Ever : Make me part of your desire',
@@ -112,21 +88,6 @@ def __init__(self, vrOverlayCenterOffset=None):
                 bs.animate(t,'opacity',{36000: 0.0,36500: 1.0,42500: 1.0,43000: 0.0})
                 bs.gameTimer(43000,t.delete)
                 ##
-                t = bs.newNode('text',
-                       attrs={ 'text':u'Today is the tomorrow you spoke of yesterday',
-                               'scale': 1.3,
-                              'maxWidth':0,
-                              'position':(0,138),
-                              'shadow':0.5,
-                              'flatness':1.0,
-                              'color':(1,1,1),
-                              'hAlign':'center',
-                              'vAttach':'bottom'})
-                bs.animate(t,'opacity',{45000: 0.0,45500: 1.0,50500: 1.0,51000: 0.0})
-                bs.gameTimer(51000,t.delete)
-        bs.gameTimer(3500,bs.Call(text))
-        bs.gameTimer(56000,bs.Call(text),repeat = True)
-
         import fire
         if fire.tell_time:
             def _time():
